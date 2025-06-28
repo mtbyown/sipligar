@@ -1,21 +1,45 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const UselessHome = () => {
   const navigate = useNavigate();
 
-  const randomPages = [
+  const allPages = [
     "/BallBouncingGame",
     "/FirstUseless",
     "/SnakeGame",
     "/TrickyUseless",
     "/Useless",
     "/UselessFinalBoss",
+    "/UselessAnimation",
+    "/UselessIllusion",
+    "/RealIllusion",
+    "/404Brain",
+    "/ClickMeWar",
+    "/RandomEmojiExplosion",
+    "/ThinkingIndicator",
+    "/UselessAnimations",
   ];
 
+  const [visitedPages, setVisitedPages] = useState([]);
+
   const triggerUseless = () => {
-    const random = Math.floor(Math.random() * randomPages.length);
-    navigate(randomPages[random]);
+    // filter pages not yet visited
+    const remainingPages = allPages.filter((page) => !visitedPages.includes(page));
+
+    // if all pages are visited, reset
+    if (remainingPages.length === 0) {
+      setVisitedPages([]);
+      return triggerUseless(); // re-run to start fresh
+    }
+
+    // pick a random unvisited page
+    const randomIndex = Math.floor(Math.random() * remainingPages.length);
+    const selectedPage = remainingPages[randomIndex];
+
+    // update visited and navigate
+    setVisitedPages((prev) => [...prev, selectedPage]);
+    navigate(selectedPage);
   };
 
   const uselessFacts = [
