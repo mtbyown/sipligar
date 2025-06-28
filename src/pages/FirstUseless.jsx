@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const Useless = () => {
+const FirstUseless = () => {
   const [clicks, setClicks] = useState(0);
   const [loading, setLoading] = useState(false);
   const [uselessFact, setUselessFact] = useState(null);
@@ -80,4 +80,4 @@ const Useless = () => {
   );
 };
 
-export default Useless;
+export default FirstUseless;
