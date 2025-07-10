@@ -46,7 +46,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       <Route path="/RandomEmojiExplosion" element={<RandomEmojiExplosion />} />
       <Route path="/ThinkingIndicator" element={<ThinkingIndicator />} />
       <Route path="/FakeProgress" element={<FakeProgress />} />
-    Route path="/NoSignal" element={<NoSignal />} />
+  <Route path="/NoSignal" element={<NoSignalCRT />} />
 
       <Route path="*" element={<div className="text-center py-20 text-white">Page not found</div>} />
 
