@@ -24,6 +24,7 @@ import ThinkingIndicator from "./pages/ThinkingIndicator";
 import UselessAnimations from "./pages/UselessAnimation";
 import FakeProgress from "./pages/FakeProgress";
 import BeyondTimeIllusion from "./pages/BeyondTimeIllusion";
+import NoSignalCrt from "./pages/NoSignal";
 ReactDOM.createRoot(document.getElementById("root")).render(
   <BrowserRouter>
 
@@ -45,7 +46,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       <Route path="/RandomEmojiExplosion" element={<RandomEmojiExplosion />} />
       <Route path="/ThinkingIndicator" element={<ThinkingIndicator />} />
       <Route path="/FakeProgress" element={<FakeProgress />} />
-    
+    Route path="/NoSignal" element={<NoSignal />} />
 
       <Route path="*" element={<div className="text-center py-20 text-white">Page not found</div>} />
 
